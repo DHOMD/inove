@@ -183,25 +183,19 @@ blockquote, pre {
 	margin-top:5px;
 	/*font-size:95%;*/
 }
-#sidebar #feedrss, 
-#sidebar #feedemail, 
-#sidebar #followme {
-	padding:5px 31px 5px 5px;
-	float:right;
-}
 #sidebar #feedrss {
-	background: url(img/feeds.gif) 100% 5px no-repeat;
+	background:url(img/feeds.gif) 100% 5px no-repeat;
 	margin-right:5px;
 }
 #sidebar #feedemail {
-	background: url(img/feeds.gif) 100% -45px no-repeat;
+	background:url(img/feeds.gif) 100% -45px no-repeat;
 	margin-left:0;
-	margin-right:15px;
+	margin-right:20px;
 }
-#sidebar #followme {
-	background: url(img/feeds.gif) 100% -95px no-repeat;
-	margin-left:0;
-	margin-right:15px;
+#sidebar #feedrss, 
+#sidebar #feedemail {
+	padding:5px 31px 5px 5px;
+	float:right;
 }
 #subscribe li {
 	float:right;

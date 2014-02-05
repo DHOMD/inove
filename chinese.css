@@ -18,17 +18,13 @@ small,
 .post .comments, 
 .post .addcomment, 
 .post .editlinks, 
-.post .addlink, 
 #pagenavi, 
 #footer, 
 #cmtswitcher .addcomment, 
 #cmtswitcher .addtrackback, 
 #respond, 
 #commentnavi, 
-#submitbox #submit,
-#sidebar #feedrss, 
-#sidebar #feedemail, 
-#sidebar #followme {
+#submitbox #submit {
 	font-size:12px;
 }
 #caption {

@@ -4,10 +4,7 @@ Template Name: Links
 */
 ?>
 
-<?php
-	get_header();
-	$linkcats = $wpdb->get_results("SELECT T1.name AS name FROM $wpdb->terms T1, $wpdb->term_taxonomy T2 WHERE T1.term_id = T2.term_id AND T2.taxonomy = 'link_category'");
-?>
+<?php get_header(); ?>
 
 <?php if (have_posts()) : the_post(); update_post_caches($posts); ?>
 
@@ -31,23 +28,13 @@ Template Name: Links
 			<div class="fixed"></div>
 		</div>
 		<div class="content">
+			<div class="boxcaption"><h3><?php _e('Blogroll', 'inove'); ?></h3></div>
+			<div class="box linkcat">
+				<ul><?php wp_list_bookmarks('title_li=&categorize=0&orderby=rand'); ?></ul>
+				<div class="fixed"></div>
+			</div>
 
-			<?php if($linkcats) : foreach($linkcats as $linkcat) : ?>
-				<div class="boxcaption"><h3><?php echo $linkcat->name; ?></h3></div>
-				<div class="box linkcat">
-					<ul>
-						<?php
-							$bookmarks = get_bookmarks('orderby=rand&category_name=' . $linkcat->name);
-							if ( !empty($bookmarks) ) {
-								foreach ($bookmarks as $bookmark) {
-									echo '<li><a href="' . $bookmark->link_url . '" title="' . $bookmark->link_description . '">' . $bookmark->link_name . '</a></li>';
-								}
-							}
-						?>
-					</ul>
-					<div class="fixed"></div>
-				</div>
-			<?php endforeach; endif; the_content(); ?>
+			<?php the_content(); ?>
 			<div class="fixed"></div>
 		</div>
 	</div>

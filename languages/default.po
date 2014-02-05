@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: iNove 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-07 14:01+0900\n"
+"POT-Creation-Date: 2009-06-06 14:03+0800\n"
 "PO-Revision-Date: \n"
 "Last-Translator: mg12 <wuzhao.mail@gmail.com>\n"
 "Language-Team: NeoEase <http://www.neoease.com/themes/>\n"
@@ -77,12 +77,12 @@ msgid "Archive for %1$s"
 msgstr ""
 
 #: archive.php:25
-#: archive.php:47
+#: archive.php:48
 #: archives.php:14
 #: comments.php:91
-#: functions.php:563
-#: index.php:22
-#: links.php:25
+#: functions.php:503
+#: index.php:23
+#: links.php:22
 #: page.php:8
 #: single.php:15
 #: twitter.php:15
@@ -105,79 +105,79 @@ msgstr ""
 msgid "Blog Archives"
 msgstr ""
 
-#: archive.php:49
+#: archive.php:50
 #: archives.php:15
 #: comments.php:95
-#: functions.php:571
-#: index.php:24
-#: links.php:26
+#: functions.php:511
+#: index.php:25
+#: links.php:23
 #: page.php:9
 #: single.php:17
 #: twitter.php:16
 msgid "Edit"
 msgstr ""
 
-#: archive.php:50
-#: index.php:25
+#: archive.php:51
+#: index.php:26
 msgid "No comments"
 msgstr ""
 
-#: archive.php:50
-#: index.php:25
+#: archive.php:51
+#: index.php:26
 msgid "1 comment"
 msgstr ""
 
-#: archive.php:50
-#: index.php:25
+#: archive.php:51
+#: index.php:26
 #, php-format
 msgid "% comments"
 msgstr ""
 
-#: archive.php:50
-#: index.php:25
+#: archive.php:51
+#: index.php:26
 msgid "Comments off"
 msgstr ""
 
-#: archive.php:54
-#: index.php:29
+#: archive.php:55
+#: index.php:30
 msgid "Read more..."
-msgstr ""
-
-#: archive.php:58
-#: index.php:33
-#: single.php:29
-msgid "Categories: "
 msgstr ""
 
 #: archive.php:59
 #: index.php:34
+#: single.php:29
+msgid "Categories: "
+msgstr ""
+
+#: archive.php:60
+#: index.php:35
 #: single.php:30
 msgid "Tags: "
 msgstr ""
 
-#: archive.php:64
+#: archive.php:67
 #: archives.php:39
-#: index.php:39
-#: links.php:59
+#: index.php:42
+#: links.php:46
 #: page.php:26
 #: single.php:68
 #: twitter.php:36
 msgid "Sorry, no posts matched your criteria."
 msgstr ""
 
-#: archive.php:72
-#: index.php:47
+#: archive.php:75
+#: index.php:50
 msgid "Newer Entries"
 msgstr ""
 
-#: archive.php:73
-#: index.php:48
+#: archive.php:76
+#: index.php:51
 msgid "Older Entries"
 msgstr ""
 
 #: archives.php:17
 #: comments.php:31
-#: links.php:28
+#: links.php:25
 #: page.php:11
 #: single.php:19
 #: twitter.php:18
@@ -185,7 +185,7 @@ msgid "Leave a comment"
 msgstr ""
 
 #: archives.php:18
-#: links.php:29
+#: links.php:26
 #: page.php:12
 #: single.php:20
 #: twitter.php:19
@@ -198,7 +198,7 @@ msgstr ""
 
 #: comments.php:25
 #: comments.php:28
-#: functions.php:367
+#: functions.php:347
 msgid "Comments"
 msgstr ""
 
@@ -219,13 +219,13 @@ msgid "Comment pages"
 msgstr ""
 
 #: comments.php:91
-#: functions.php:563
+#: functions.php:503
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
 #: comments.php:91
-#: functions.php:563
+#: functions.php:503
 msgid "H:i"
 msgstr ""
 
@@ -301,196 +301,176 @@ msgid "Copyright &copy; "
 msgstr ""
 
 #: footer.php:39
-#, php-format
-msgid "Theme by <a href=\"%1$s\">NeoEase</a>. Valid <a href=\"%2$s\">XHTML 1.1</a> and <a href=\"%3$s\">CSS 3</a>."
+msgid "Theme by <a href=\"http://www.neoease.com/\">NeoEase</a>. Valid <a href=\"http://validator.w3.org/check?uri=referer\">XHTML 1.1</a> and <a href=\"http://jigsaw.w3.org/css-validator/check/referer?profile=css3\">CSS 3</a>."
 msgstr ""
 
-#: functions.php:180
-#: functions.php:189
+#: functions.php:160
+#: functions.php:169
 msgid "Current Theme Options"
 msgstr ""
 
-#: functions.php:194
+#: functions.php:174
 msgid "Search"
 msgstr ""
 
-#: functions.php:198
+#: functions.php:178
 msgid "Using google custom search engine."
 msgstr ""
 
-#: functions.php:201
+#: functions.php:181
 msgid "CX:"
 msgstr ""
 
-#: functions.php:204
-#, php-format
-msgid "Find <code>name=\"cx\"</code> in the <strong>Search box code</strong> of <a href=\"%1$s\">Google Custom Search Engine</a>, and type the <code>value</code> here.<br/>For example: <code>014782006753236413342:1ltfrybsbz4</code>"
+#: functions.php:184
+msgid "Find <code>name=\"cx\"</code> in the <strong>Search box code</strong> of <a href=\"http://www.google.com/coop/cse/\">Google Custom Search Engine</a>, and type the <code>value</code> here.<br/>For example: <code>014782006753236413342:1ltfrybsbz4</code>"
 msgstr ""
 
-#: functions.php:213
+#: functions.php:193
 msgid "Menubar"
 msgstr ""
 
-#: functions.php:217
+#: functions.php:197
 msgid "Show pages as menu."
 msgstr ""
 
-#: functions.php:221
+#: functions.php:201
 msgid "Show categories as menu."
 msgstr ""
 
-#: functions.php:231
+#: functions.php:211
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:235
-msgid "Hide sidebar from all pages."
+#: functions.php:215
+msgid "Remove sidebar from all pages."
 msgstr ""
 
-#: functions.php:246
+#: functions.php:226
 msgid "Notice"
 msgstr ""
 
-#: functions.php:248
-#: functions.php:272
-#: functions.php:307
-#: functions.php:430
+#: functions.php:228
+#: functions.php:252
+#: functions.php:287
 msgid "HTML enabled"
 msgstr ""
 
-#: functions.php:254
+#: functions.php:234
 msgid "This notice bar will display at the top of posts on homepage."
 msgstr ""
 
-#: functions.php:270
+#: functions.php:250
 msgid "Banner"
 msgstr ""
 
-#: functions.php:276
+#: functions.php:256
 msgid "This banner will display at the right of header. (height: 60 pixels)"
 msgstr ""
 
-#: functions.php:278
-#: functions.php:313
+#: functions.php:258
+#: functions.php:293
 msgid "Who can see?"
 msgstr ""
 
-#: functions.php:281
-#: functions.php:316
+#: functions.php:261
+#: functions.php:296
 msgid "Registered Users"
 msgstr ""
 
-#: functions.php:285
-#: functions.php:320
+#: functions.php:265
+#: functions.php:300
 msgid "Commentator"
 msgstr ""
 
-#: functions.php:289
-#: functions.php:324
+#: functions.php:269
+#: functions.php:304
 msgid "Visitors"
 msgstr ""
 
-#: functions.php:305
-#: sidebar.php:56
+#: functions.php:285
+#: sidebar.php:54
 msgid "Showcase"
 msgstr ""
 
-#: functions.php:311
+#: functions.php:291
 msgid "This showcase will display at the top of sidebar."
 msgstr ""
 
-#: functions.php:329
+#: functions.php:309
 msgid "Title:"
 msgstr ""
 
-#: functions.php:345
+#: functions.php:325
 msgid "Posts"
 msgstr ""
 
-#: functions.php:349
+#: functions.php:329
 msgid "Show author on posts."
 msgstr ""
 
-#: functions.php:353
+#: functions.php:333
 msgid "Show categories on posts."
 msgstr ""
 
-#: functions.php:357
+#: functions.php:337
 msgid "Show tags on posts."
 msgstr ""
 
-#: functions.php:371
+#: functions.php:351
 msgid "Submit comments with Ctrl+Enter."
 msgstr ""
 
-#: functions.php:381
+#: functions.php:361
 msgid "Feed"
 msgstr ""
 
-#: functions.php:385
+#: functions.php:365
 msgid "Show the feed reader list when mouse over on feed button."
 msgstr ""
 
-#: functions.php:390
+#: functions.php:370
 msgid "Custom feed."
 msgstr ""
 
-#: functions.php:392
-#: functions.php:398
+#: functions.php:372
+#: functions.php:378
 msgid "URL:"
 msgstr ""
 
-#: functions.php:396
+#: functions.php:376
 msgid "Email feed."
 msgstr ""
 
-#: functions.php:407
-#: sidebar.php:42
-msgid "Twitter"
-msgstr ""
-
-#: functions.php:411
-msgid "Add Twitter button."
-msgstr ""
-
-#: functions.php:414
-msgid "Twitter username:"
-msgstr ""
-
-#: functions.php:428
-msgid "Web Analytics"
-msgstr ""
-
-#: functions.php:435
-msgid "Add web analytics code to your site. (e.g. Google Analytics, Yahoo! Web Analytics, ...)"
-msgstr ""
-
-#: functions.php:446
+#: functions.php:385
 msgid "Save Changes"
 msgstr ""
 
-#: functions.php:567
+#: functions.php:507
 msgid "Reply"
 msgstr ""
 
-#: functions.php:568
+#: functions.php:508
 msgid "Quote"
 msgstr ""
 
-#: functions.php:573
+#: functions.php:513
 msgid "Advanced edit"
 msgstr ""
 
-#: functions.php:579
+#: functions.php:519
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: links.php:18
+#: links.php:15
 msgid "Add link"
 msgstr ""
 
-#: links.php:19
+#: links.php:16
 msgid "Edit links"
+msgstr ""
+
+#: links.php:31
+msgid "Blogroll"
 msgstr ""
 
 #: sidebar.php:25
@@ -498,7 +478,7 @@ msgid "Subscribe to this blog..."
 msgstr ""
 
 #: sidebar.php:25
-msgid "<abbr title=\"Really Simple Syndication\">RSS</abbr>"
+msgid "<abbr title=\"Really Simple Syndication\">RSS</abbr> feed"
 msgstr ""
 
 #: sidebar.php:28
@@ -550,10 +530,6 @@ msgstr ""
 
 #: sidebar.php:40
 msgid "Email feed"
-msgstr ""
-
-#: sidebar.php:42
-msgid "Follow me!"
 msgstr ""
 
 #: single.php:7

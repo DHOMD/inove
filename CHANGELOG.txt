@@ -1,20 +1,4 @@
     VERSION DATE       TYPE   CHANGES
-    1.4.6   2009/08/07 NEW    Added 'web analytics' options.
-                       NEW    Added 'twitter' options.
-                       NEW    Added Kurdish language support. (Thanks Sia)
-                       MODIFY Optimize SQL to select the copyright years.
-                       MODIFY Show tag cloud on all the pages.
-                       MODIFY Changed the mode of WP-EasyArchives to 'none' in sidebar.
-                       MODIFY Changed font-family of text boxes.
-                       MODIFY Set the delay time for the menus on mouse out action.
-                       MODIFY Split links by category in links page (links.php).
-                       MODIFY Updated style for Thread Twitter.
-                       MODIFY Updated Polish translation.
-                       MODIFY Updated Dutch translation.
-                       MODIFY Updated Janpanese translation.
-                       MODIFY Update Simplified Chinese translation.
-                       MODIFY Update German translation.
-                       FIX    Fixed the comments, they are XHTML valid!.
     1.4.5   2009/06/09 MODIFY Changed text 'Remove sidebar from all pages.' to 'Hide sidebar from all pages.'
                        FIX    Fixed 'Google adsenses to cover the menus'. (Thanks bolo)
     1.4.4   2009/06/09 MODIFY Show the AJAX loader icon when change page in WP-RecentComments.
@@ -23,7 +7,7 @@
     1.4.2   2009/06/06 NEW    Change the style of sidebar separating.
                        FIX    Fixed a plugin conflict (wp_head was not found in header.php/wp_footer was not found in footer.php).
     1.4.1   2009/06/06 NEW    Multi level menu is now supported.
-                       NEW    Added Indonesian language support. (Thanks 4MB)
+                       NEW    Added Indonesian language support. (Thanks AMB)
                        MODIFY Move the '404 talker' image from Flickr to localhost.
                        MODIFY Updated Italian translation.
                        MODIFY Updated Finnish translation.

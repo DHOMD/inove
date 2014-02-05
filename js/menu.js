@@ -130,13 +130,41 @@ currentOffset = function(element) {
 }
 
 cumulativeOffset = function(element) {
-	var valueT = 0, valueL = 0;
-	do {
-		valueT += element.offsetTop  || 0;
-		valueL += element.offsetLeft || 0;
-		element = element.offsetParent;
-	} while (element);
-	return [valueL, valueT];
+    if (element.getBoundingClientRect) {
+        return getOffsetRect(element)
+    } else { // old browser
+        return getOffsetSum(element)
+    }
+}
+
+getOffsetRect = function(element) {
+    var box = element.getBoundingClientRect()
+
+    var body = document.body
+    var docElem = document.documentElement
+
+    var scrollTop = window.pageYOffset || docElem.scrollTop || body.scrollTop
+    var scrollLeft = window.pageXOffset || docElem.scrollLeft || body.scrollLeft
+
+    var clientTop = docElem.clientTop || body.clientTop || 0
+    var clientLeft = docElem.clientLeft || body.clientLeft || 0
+
+    var top  = box.top +  scrollTop - clientTop
+    var left = box.left + scrollLeft - clientLeft
+
+    return [Math.round(left), Math.round(top)];
+}
+
+getOffsetSum = function(element) {
+  var top=0, left=0
+
+  while(element) {
+    top = top + parseInt(element.offsetTop)
+    left = left + parseInt(element.offsetLeft)
+    element = element.offsetParent
+  }
+
+  return [left, top];
 }
 
 addListener = function(element, name, observer, useCapture) {

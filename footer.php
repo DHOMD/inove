@@ -3,9 +3,11 @@
 
 	<?php
 		$options = get_option('inove_options');
+	if(is_home()) { 
 		global $inove_nosidebar;
 		if(!$options['nosidebar'] && !$inove_nosidebar) {
 			get_sidebar();
+		}
 		}
 	?>
 	<div class="fixed"></div>
@@ -19,10 +21,10 @@
 	<div id="copyright">
 		<?php
 			global $wpdb;
-			$post_datetimes = $wpdb->get_row($wpdb->prepare("SELECT YEAR(min(post_date_gmt)) AS firstyear, YEAR(max(post_date_gmt)) AS lastyear FROM $wpdb->posts WHERE post_date_gmt > 1970"));
+			$post_datetimes = $wpdb->get_results("SELECT YEAR(min(post_date_gmt)) AS firstyear, YEAR(max(post_date_gmt)) AS lastyear FROM $wpdb->posts WHERE post_date_gmt > 1970");
 			if ($post_datetimes) {
-				$firstpost_year = $post_datetimes->firstyear;
-				$lastpost_year = $post_datetimes->lastyear;
+				$firstpost_year = $post_datetimes[0]->firstyear;
+				$lastpost_year = $post_datetimes[0]->lastyear;
 
 				$copyright = __('Copyright &copy; ', 'inove') . $firstpost_year;
 				if($firstpost_year != $lastpost_year) {
@@ -36,7 +38,7 @@
 		?>
 	</div>
 	<div id="themeinfo">
-		<?php printf(__('Theme by <a href="%1$s">NeoEase</a>. Valid <a href="%2$s">XHTML 1.1</a> and <a href="%3$s">CSS 3</a>.', 'inove'), 'http://www.neoease.com/', 'http://validator.w3.org/check?uri=referer', 'http://jigsaw.w3.org/css-validator/check/referer?profile=css3'); ?>
+		<?php _e('Theme by <a href="http://www.neoease.com/">NeoEase</a>. Valid <a href="http://validator.w3.org/check?uri=referer">XHTML 1.1</a> and <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">CSS 3</a>.', 'inove'); ?>
 	</div>
 </div>
 <!-- footer END -->
@@ -46,14 +48,7 @@
 </div>
 <!-- wrap END -->
 
-<?php
-	wp_footer();
-
-	$options = get_option('inove_options');
-	if ($options['analytics']) {
-		echo($options['analytics_content']);
-	}
-?>
+<?php wp_footer(); ?>
 
 </body>
 </html>
