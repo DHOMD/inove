@@ -1,15 +1,15 @@
 /*
 Theme Name: iNove
 Theme URI: http://wordpress.org/extend/themes/inove/
-Description: Inspired by MacZone.sk, created by mg12. It is very stylish, widget supported and doesnâ€™t require any plugin.
-Version: 1.4.6
+Description: Inspired by MacZone.sk, created by mg12. It is very stylish, widget supported and doesn’t require any plugin.
+Version: 1.4.5
 Author: mg12
 Author URI: http://www.neoease.com/
 Tags: white, light, two-columns, fixed-width, theme-options, right-sidebar
 */
 
 /* static START */
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p,fieldset {
+* {
 	margin:0;
 	padding:0;
 }
@@ -20,7 +20,7 @@ abbr[title], acronym[title] {
 body {
 	background:#BEC3C6 url(img/bg.jpg) repeat-x;
 	color:#555;
-	font-family:Verdana,"BitStream vera Sans",Tahoma,Helvetica,Sans-serif;
+	font-family:Verdana,"BitStream vera Sans",Helvetica,Sans-serif;
 	font-size:12px;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -39,7 +39,7 @@ img {
 }
 img.sided {
 	background:#FFF;
-	border:2px solid #CCC;
+	border:1px solid #CCC;
 	padding:3px;
 }
 small {
@@ -123,7 +123,6 @@ textarea {
 	border:1px solid #A6A6A6;
 	padding:2px 1px;
 	font-size:12px;
-	font-family:Verdana,"BitStream vera Sans",Tahoma,Helvetica,Sans-serif;
 }
 .boxcaption {
 	background:#E3E4E6 url(img/box.gif) 0 0 no-repeat;
@@ -132,7 +131,7 @@ textarea {
 }
 .boxcaption h3 {
 	font-size:12px;
-	font-family:Verdana,"BitStream vera Sans",Tahoma,Helvetica,Sans-serif;
+	font-family:Verdana,"BitStream vera Sans";
 	letter-spacing:0em;
 }
 .box {
@@ -170,7 +169,6 @@ textarea {
 	background:url(img/header.jpg) 0 0 no-repeat;
 	height:90px;
 	border-bottom:1px solid #A6A6A6;
-	overflow:hidden;
 }
 #caption {
 	padding:25px 30px 0;
@@ -260,13 +258,13 @@ textarea {
 #searchbox {
 	background: url(img/searchbox.gif) no-repeat;
 	width:209px;
-	height:21px;
+	height:23px;
 	display:block;
 	float:right;
 	margin-top:4px;
 	margin-right:10px !important;
 	margin-right:5px;
-	padding:3px 2px;
+	padding:2px;
 }
 #searchbox .textfield {
 	background:none;
@@ -616,26 +614,20 @@ textarea {
 	padding:5px 15px 15px;
 }
 #sidebar #feedrss, 
-#sidebar #feedemail, 
-#sidebar #followme {
+#sidebar #feedemail {
 	height:25px;
 	line-height:25px;
 	display:block;
 	padding:5px 5px 5px 36px;
 	float:left;
 	text-decoration:none;
-	font-size:11px;
 }
 #sidebar #feedrss {
-	background: url(img/feeds.gif) 5px 5px no-repeat;
+	background:url(img/feeds.gif) 5px 5px no-repeat;
 }
 #sidebar #feedemail {
-	background: url(img/feeds.gif) 5px -45px no-repeat;
-	margin-left:10px;
-}
-#sidebar #followme {
-	background: url(img/feeds.gif) 5px -95px no-repeat;
-	margin-left:10px;
+	background:url(img/feeds.gif) 5px -45px no-repeat;
+	margin-left:15px;
 }
 #subscribe ul {
 	display:none;
@@ -1205,12 +1197,5 @@ a#gotop {
 	padding:0 10px;
 	font-size:11px;
 }
-#status_update_form {
-	padding:0 10px 10px;
-}
-#status_update_form textarea {
-	width:574px;
-	display:block;
-	margin-bottom:10px;
-}
 /* thread twitter END */
+

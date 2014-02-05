@@ -4,7 +4,7 @@ Donate link: http://www.neoease.com/themes/
 Tags: white, light, two-columns, fixed-width, theme-options, right-sidebar
 Requires at least: 2.5
 Tested up to: 2.7.1
-Stable tag: 1.4.6
+Stable tag: 1.4.5
 
 == Description ==
 

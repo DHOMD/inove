@@ -1,6 +1,6 @@
 /*
 Author: mg12
-Update: 2009/08/07
+Update: 2009/06/06
 Author URI: http://www.neoease.com/
 */
 (function() {
@@ -21,7 +21,7 @@ GhostlyMenu.prototype = {
 		this.align = align || 'left';
 		this.sub = sub || -1;
 
-		this.menu = this.obj.childNodes;
+		this.menu = this.obj.childNodes
 		if (this.menu.length < 2) { return; }
 
 		this.title = this.menu[0];
@@ -49,29 +49,30 @@ GhostlyMenu.prototype = {
 			var top = pos[1] + getHeight(this.title);
 			var left = pos[0];
 			if (this.align == 'right') {
-				left += getWidth(this.title) - getWidth(this.body);
+				var offset = getWidth(this.title) - getWidth(this.body);
+				left += offset;
 			}
 		}
 
-		if(!/current/.test(this.title.className)) {
+		if(getStyle(this.body, 'visibility') == 'hidden') {
 			this.title.className += ' current';
 		}
 
 		setStyle(this.body, 'left', left + 'px');
 		setStyle(this.body, 'top', top + 'px');
 		setStyle(this.body, 'visibility', 'visible');
+
+		if(this.tid) {
+			clearTimeout(this.tid);
+		}
 	},
 
 	deactivate: function(){
+		if(this.tid) {
+			clearTimeout(this.tid);
+		}
+		setStyle(this.body, 'visibility', 'hidden');
 		this.title.className = this.title.className.replace('current', '');
-		var thismenu = this;
-		var tid = setInterval( function() {
-			clearInterval(tid);
-			if (!/current/.test(thismenu.title.className)) {
-				setStyle(thismenu.body, 'visibility', 'hidden');
-			}
-			return false;
-		}, 400);
 	}
 }
 
@@ -111,6 +112,10 @@ setStyle = function(element, key, value) {
 	element.style[key] = value;
 }
 
+getStyle = function(element, key) {
+	return element.style[key];
+}
+
 cleanWhitespace = function(list) {
 	var node = list.firstChild;
 	while (node) {
@@ -130,41 +135,13 @@ currentOffset = function(element) {
 }
 
 cumulativeOffset = function(element) {
-    if (element.getBoundingClientRect) {
-        return getOffsetRect(element)
-    } else { // old browser
-        return getOffsetSum(element)
-    }
-}
-
-getOffsetRect = function(element) {
-    var box = element.getBoundingClientRect()
-
-    var body = document.body
-    var docElem = document.documentElement
-
-    var scrollTop = window.pageYOffset || docElem.scrollTop || body.scrollTop
-    var scrollLeft = window.pageXOffset || docElem.scrollLeft || body.scrollLeft
-
-    var clientTop = docElem.clientTop || body.clientTop || 0
-    var clientLeft = docElem.clientLeft || body.clientLeft || 0
-
-    var top  = box.top +  scrollTop - clientTop
-    var left = box.left + scrollLeft - clientLeft
-
-    return [Math.round(left), Math.round(top)];
-}
-
-getOffsetSum = function(element) {
-  var top=0, left=0
-
-  while(element) {
-    top = top + parseInt(element.offsetTop)
-    left = left + parseInt(element.offsetLeft)
-    element = element.offsetParent
-  }
-
-  return [left, top];
+	var valueT = 0, valueL = 0;
+	do {
+		valueT += element.offsetTop  || 0;
+		valueL += element.offsetLeft || 0;
+		element = element.offsetParent;
+	} while (element);
+	return [valueL, valueT];
 }
 
 addListener = function(element, name, observer, useCapture) {

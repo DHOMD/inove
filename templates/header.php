@@ -1,5 +1,5 @@
 <!-- header START -->
-<div id="header" onclick="location.href='http://d-h-o.us/home/kop/';" style="cursor: pointer;">
+<div id="header" onclick="location.href='../home/';" style="cursor: pointer;">
 
 
 	<!-- banner START -->
@@ -92,5 +92,4 @@
 
 	<div class="fixed"></div>
 </div>
-<?php wp_head(); ?>
 <!-- navigation END -->

@@ -31,10 +31,6 @@ class iNoveOptions {
 			$options['feed_url'] = '';
 			$options['feed_email'] = false;
 			$options['feed_url_email'] = '';
-			$options['twitter'] = false;
-			$options['twitter_username'] = '';
-			$options['analytics'] = false;
-			$options['analytics_content'] = '';
 			update_option('inove_options', $options);
 		}
 		return $options;
@@ -112,7 +108,7 @@ class iNoveOptions {
 			$options['showcase_title'] = stripslashes($_POST['showcase_title']);
 			$options['showcase_content'] = stripslashes($_POST['showcase_content']);
 
-			// posts
+			// author & categories & tags
 			if ($_POST['author']) {
 				$options['author'] = (bool)true;
 			} else {
@@ -155,22 +151,6 @@ class iNoveOptions {
 			}
 			$options['feed_url_email'] = stripslashes($_POST['feed_url_email']);
 
-			// twitter
-			if ($_POST['twitter']) {
-				$options['twitter'] = (bool)true;
-			} else {
-				$options['twitter'] = (bool)false;
-			}
-			$options['twitter_username'] = stripslashes($_POST['twitter_username']);
-
-			// analytics
-			if ($_POST['analytics']) {
-				$options['analytics'] = (bool)true;
-			} else {
-				$options['analytics'] = (bool)false;
-			}
-			$options['analytics_content'] = stripslashes($_POST['analytics_content']);
-
 			update_option('inove_options', $options);
 
 		} else {
@@ -201,7 +181,7 @@ class iNoveOptions {
 						<?php _e('CX:', 'inove'); ?>
 						 <input type="text" name="google_cse_cx" id="google_cse_cx" class="code" size="40" value="<?php echo($options['google_cse_cx']); ?>">
 						<br/>
-						<?php printf(__('Find <code>name="cx"</code> in the <strong>Search box code</strong> of <a href="%1$s">Google Custom Search Engine</a>, and type the <code>value</code> here.<br/>For example: <code>014782006753236413342:1ltfrybsbz4</code>', 'inove'), 'http://www.google.com/coop/cse/'); ?>
+						<?php _e('Find <code>name="cx"</code> in the <strong>Search box code</strong> of <a href="http://www.google.com/coop/cse/">Google Custom Search Engine</a>, and type the <code>value</code> here.<br/>For example: <code>014782006753236413342:1ltfrybsbz4</code>', 'inove'); ?>
 					</td>
 				</tr>
 			</tbody>
@@ -401,47 +381,6 @@ class iNoveOptions {
 			</tbody>
 		</table>
 
-		<table class="form-table">
-			<tbody>
-				<tr valign="top">
-					<th scope="row"><?php _e('Twitter', 'inove'); ?></th>
-					<td>
-						<label>
-							<input name="twitter" type="checkbox" value="checkbox" <?php if($options['twitter']) echo "checked='checked'"; ?> />
-							 <?php _e('Add Twitter button.', 'inove'); ?>
-						</label>
-						<br />
-						 <?php _e('Twitter username:', 'inove'); ?>
-						 <input type="text" name="twitter_username" id="twitter_username" class="code" size="40" value="<?php echo($options['twitter_username']); ?>">
-						<br />
-						<a href="http://twitter.com/neoease/" onclick="window.open(this.href);return false;">Follow NeoEase</a>
-						 | <a href="http://twitter.com/mg12/" onclick="window.open(this.href);return false;">Follow MG12</a>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-
-		<table class="form-table">
-			<tbody>
-				<tr valign="top">
-					<th scope="row">
-						<?php _e('Web Analytics', 'inove'); ?>
-						<br/>
-						<small style="font-weight:normal;"><?php _e('HTML enabled', 'inove'); ?></small>
-					</th>
-					<td>
-						<label>
-							<input name="analytics" type="checkbox" value="checkbox" <?php if($options['analytics']) echo "checked='checked'"; ?> />
-							 <?php _e('Add web analytics code to your site. (e.g. Google Analytics, Yahoo! Web Analytics, ...)', 'inove'); ?>
-						</label>
-						<label>
-							<textarea name="analytics_content" cols="50" rows="10" id="analytics_content" class="code" style="width:98%;font-size:12px;"><?php echo($options['analytics_content']); ?></textarea>
-						</label>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-
 		<p class="submit">
 			<input class="button-primary" type="submit" name="inove_save" value="<?php _e('Save Changes', 'inove'); ?>" />
 		</p>
@@ -522,8 +461,8 @@ if (function_exists('wp_list_comments')) {
 	// comment count
 	function comment_count( $commentcount ) {
 		global $id;
-		$_comments = get_comments('status=approve&post_id=' . $id);
-		$comments_by_type = &separate_comments($_comments);
+		$_commnets = get_comments('status=approve&post_id=' . $id);
+		$comments_by_type = &separate_comments($_commnets);
 		return count($comments_by_type['comment']);
 	}
 }
@@ -585,7 +524,7 @@ function custom_comments($comment, $args, $depth) {
 			</div>
 		</div>
 		<div class="fixed"></div>
-
+	</li>
 <?php
 }
 ?>

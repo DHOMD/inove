@@ -10,7 +10,9 @@
 	</div>
 
 	<div class="post" id="post-<?php the_ID(); ?>">
+		<h2><?php the_title(); ?></h2>
 		<div class="info">
+			<span class="date"><?php the_time(__('F jS, Y', 'inove')) ?></span>
 			<?php if ($options['author']) : ?><span class="author"><?php the_author_posts_link(); ?></span><?php endif; ?>
 			<?php edit_post_link(__('Edit', 'inove'), '<span class="editpost">', '</span>'); ?>
 			<?php if ($comments || comments_open()) : ?>
