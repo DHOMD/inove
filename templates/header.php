@@ -1,5 +1,5 @@
 <!-- header START -->
-<div id="header" onclick="location.href='http://d-h-o.us/home/kop/';" style="cursor: pointer;">
+<div id="header" onclick="location.href='http://dho.co/kop/';" style="cursor: pointer;">
 
 
 	<!-- banner START -->
