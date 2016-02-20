@@ -1,5 +1,5 @@
 <!-- header START -->
-<div id="header" onclick="location.href='../home/';" style="cursor: pointer;">
+<div id="header" onclick="location.href='/';" style="cursor: pointer;">
 
 
 	<!-- banner START -->
